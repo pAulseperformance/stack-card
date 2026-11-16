@@ -69,7 +69,7 @@ If you want the dates to fill themselves, point the card at your own record inst
 
 Live example, drawn from that record:
 
-<img src="https://pAulseperformance.com/card/stack.svg" alt="the stack behind the site, ranked by last use" width="460">
+<img src="https://pAulseperformance.com/card/stack.svg?v=2026-11-01" alt="the stack behind the site, ranked by last use" width="460">
 
 ## Test
 
