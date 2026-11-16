@@ -1,0 +1,35 @@
+{
+  "title": "THE STACK",
+  "note": "read from .github/stack.json, drawn on every push",
+  "groups": [
+    {
+      "title": "Build and ship",
+      "services": [
+        { "name": "Cloudflare", "last_used": "2026-11-17" },
+        { "name": "GitHub", "last_used": "2026-11-17" },
+        { "name": "Modal", "last_used": "2026-11-06" },
+        { "name": "DigitalOcean", "last_used": "2026-10-01" },
+        { "name": "Hetzner", "last_used": null }
+      ]
+    },
+    {
+      "title": "Data",
+      "services": [
+        { "name": "Twelve Data", "last_used": "2026-11-17" },
+        { "name": "Hugging Face", "last_used": "2026-11-06" },
+        { "name": "Exa", "last_used": null }
+      ]
+    },
+    {
+      "title": "Reach",
+      "services": [
+        { "name": "Tailscale", "last_used": "2026-11-13" },
+        { "name": "Zoho Mail", "last_used": null }
+      ]
+    },
+    {
+      "title": "Never used",
+      "services": [{ "name": "ElevenLabs", "last_used": "never" }]
+    }
+  ]
+}

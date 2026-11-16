@@ -1,0 +1,23 @@
+name: Stack card
+description: Draw a stack card from a JSON record and write it as an SVG you can put in a README.
+author: Paul Mendes
+branding:
+  icon: activity
+  color: green
+
+inputs:
+  config:
+    description: Path to the JSON record of services and the last day each was used.
+    required: false
+    default: .github/stack.json
+  output:
+    description: Path to write the SVG to.
+    required: false
+    default: .github/stack.svg
+
+runs:
+  using: composite
+  steps:
+    - name: Draw the card
+      shell: bash
+      run: node "${{ github.action_path }}/render.mjs" "${{ inputs.config }}" "${{ inputs.output }}"
