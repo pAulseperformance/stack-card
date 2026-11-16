@@ -1,0 +1,22 @@
+name: selftest
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  use-the-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: the action renders the example
+        uses: pAulseperformance/stack-card@v1
+        with:
+          config: example/stack.json
+          output: ${{ runner.temp }}/card.svg
+      - name: it is an SVG with the services in it
+        run: |
+          set -euo pipefail
+          head -c 60 "$RUNNER_TEMP/card.svg"; echo
+          grep -q '<svg xmlns' "$RUNNER_TEMP/card.svg"
+          grep -q 'Twelve Data' "$RUNNER_TEMP/card.svg"
+          test "$(grep -o '</svg>' "$RUNNER_TEMP/card.svg" | wc -l | tr -d ' ')" = "1"
+          echo "selftest: ok"
